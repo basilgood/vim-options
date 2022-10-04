@@ -3,6 +3,23 @@ vim9script
 augroup vimOptions
   autocmd!
 augroup END
+
+# netrw
+g:netrw_list_hide = ',^\.\=/\=$'
+g:netrw_banner = 0
+g:netrw_altfile = 1
+g:netrw_preview = 1
+g:netrw_alto = 0
+g:netrw_use_errorwindow = 0
+g:netrw_special_syntax = 1
+autocmd vimRc FileType netrw nmap <buffer> . mfmx
+cnoreabbrev <silent> ee e %:h
+autocmd vimRc CursorHold * {
+  if buffer_name() == $HOME .. '/.vim'
+    set ft=netrw
+  endif
+}
+
 # options
 &t_EI ..= "\e[2 q"
 &t_SR ..= "\e[4 q"
@@ -83,7 +100,7 @@ nnoremap ]q :cnext<cr>
 
 # autocmds
 # keep cursor position
-au vimOptions BufReadPost * {
+autocmd vimOptions BufReadPost * {
   if line("'\"") > 1 && line("'\"") <= line("$") && &filetype != 'gitcommit'
     exe 'normal! g`"'
   endif
