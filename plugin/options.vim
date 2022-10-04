@@ -82,7 +82,7 @@ else
 endif
 set backspace=indent,eol,start
 &laststatus = 2
-set statusline=%#tabline#[%t]%y%#error#%m%*
+set statusline=%#tabline#[%{buffer_name()}]%y%#error#%m%r%h%*
 
 # mappings
 nnoremap <cr> :w<cr>
