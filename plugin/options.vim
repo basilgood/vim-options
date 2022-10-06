@@ -12,13 +12,22 @@ g:netrw_preview = 1
 g:netrw_alto = 0
 g:netrw_use_errorwindow = 0
 g:netrw_special_syntax = 1
+
 autocmd vimRc FileType netrw nmap <buffer> . mfmx
-cnoreabbrev <silent> ee e %:h
 autocmd vimRc CursorHold * {
   if buffer_name() == $HOME .. '/.vim'
     set ft=netrw
   endif
 }
+
+def Ls(): void
+  var file = expand('%:t')
+  execute 'Explore' expand('%:h')
+  search(file, 'wc')
+enddef
+
+command Ex Ls()
+cnoreabbrev <silent> ee Ex
 
 # options
 &t_EI ..= "\e[2 q"
