@@ -94,7 +94,6 @@ set backspace=indent,eol,start
 set statusline=%#tabline#[%{pathshorten(expand('%'))}]%y%#error#%m%r%h%*
 
 # mappings
-nnoremap <cr> :w<cr>
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
 nnoremap <silent> <C-w>z :wincmd z<Bar>cclose<Bar>lclose<CR>
 cnoremap <c-a> <Home>
