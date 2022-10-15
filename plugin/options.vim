@@ -62,7 +62,7 @@ set number
 set mouse=a ttymouse=sgr
 set signcolumn=yes
 set splitright splitbelow
-set fillchars=diff:-,vert:│,stl:―,stlnc:―
+set fillchars=diff:-,vert:│
 set virtualedit=onemore
 set sidescrolloff=10 sidescroll=1
 set sessionoptions=buffers,curdir,folds,tabpages,winsize
@@ -91,7 +91,7 @@ else
 endif
 set backspace=indent,eol,start
 &laststatus = 2
-set statusline=%#tabline#[%{pathshorten(expand('%'))}]%y%#error#%m%r%h%*
+set statusline=[%{pathshorten(expand('%'))}]%y%#error#%m%r%h%*
 
 # mappings
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
