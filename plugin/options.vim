@@ -49,6 +49,7 @@ set nowrap
 &showbreak = '↳ '
 set breakindent
 set breakindentopt=sbr
+set termguicolors
 set noshowmode
 set matchpairs-=<:>
 set nrformats-=octal
