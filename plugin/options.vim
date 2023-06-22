@@ -91,7 +91,7 @@ else
 endif
 set backspace=indent,eol,start
 &laststatus = 2
-let &statusline = ' %{mode()} | %t %m %r %= %c:%l/%L    %y'
+&statusline = ' %{mode()} | %t %m %r %= %c:%l/%L    %y'
 
 # mappings
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
