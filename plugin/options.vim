@@ -57,7 +57,7 @@ set number
 set mouse=a ttymouse=sgr
 set signcolumn=yes
 set splitright splitbelow
-set fillchars=vert:│
+set fillchars=diff:┄,vert:│
 set virtualedit=onemore
 set sidescrolloff=10 sidescroll=1
 set sessionoptions=buffers,curdir,folds,tabpages,winsize
