@@ -89,13 +89,14 @@ set backspace=indent,eol,start
 
 # mappings
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
-nnoremap <silent> <C-w>z :wincmd z<Bar>cclose<Bar>lclose<CR>
+nnoremap <silent> <C-w>z :wincmd z<Bar>cclose<Bar>lclose<cr>
 cnoremap <c-a> <Home>
 cnoremap <c-e> <End>
 nnoremap vv viw
 xnoremap il g_o^
-vnoremap . :normal .<CR>
-nnoremap <silent> 3<C-g> :echon system('cat .git/HEAD')->split('\n')<CR>
+onoremap il :<C-u>normal vil<cr>
+vnoremap . :normal .<cr>
+nnoremap <silent> 3<C-g> :echon system('cat .git/HEAD')->split('\n')<cr>
 nnoremap <silent> <C-l> :noh<bar>diffupdate<bar>syntax sync fromstart<cr><c-l>
 nnoremap [q :cprev<cr>
 nnoremap ]q :cnext<cr>
