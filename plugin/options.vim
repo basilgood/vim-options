@@ -13,7 +13,7 @@ g:netrw_alto = 0
 g:netrw_use_errorwindow = 0
 g:netrw_special_syntax = 1
 
-autocmd vimRc FileType netrw nmap <buffer> . mfmx
+autocmd vimOptions FileType netrw nmap <buffer> . mfmx
 
 def g:Ls(): void
   var file = expand('%:t')
