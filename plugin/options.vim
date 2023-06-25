@@ -128,7 +128,7 @@ autocmd vimOptions BufWritePre * {
   }
 
 # filetypes
-g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'bash=sh', 'sh', 'lua', 'vim']
+g:markdown_fenced_languages = ['ruby', 'html', 'js=javascript', 'ts=typescript', 'css', 'sh=bash', 'sh', 'lua', 'vim']
 autocmd vimOptions BufNewFile,BufReadPost *.md,*.markdown setlocal conceallevel=2 concealcursor=n
 autocmd vimOptions BufNewFile,BufReadPost *.gitignore setfiletype gitignore
 autocmd vimOptions BufNewFile,BufReadPost .babelrc    setfiletype json
