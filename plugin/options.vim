@@ -66,7 +66,7 @@ set timeoutlen=3000
 set ttimeoutlen=50
 set updatetime=100
 set incsearch hlsearch
-set pumheight=10
+set pumheight=5
 set diffopt+=context:3,indent-heuristic,algorithm:patience
 set list
 set listchars=tab:🢭\ ,trail:·,nbsp:␣,extends:❯,precedes:❮
