@@ -137,6 +137,7 @@ autocmd vimOptions BufNewFile,BufReadPost *.txt       setfiletype markdown
 autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal conceallevel=0 concealcursor=
 autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal formatoptions=
 autocmd vimOptions BufNewFile,BufReadPost *.html,*.javascript  setlocal matchpairs-=<:>
+autocmd vimOptions BufNewFile,BufReadPost * setlocal formatoptions-=o
 
 # highlight groups
 def SynGroup(): void
