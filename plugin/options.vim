@@ -12,6 +12,7 @@ g:netrw_preview = 1
 g:netrw_alto = 0
 g:netrw_use_errorwindow = 0
 g:netrw_special_syntax = 1
+g:netrw_cursor = 0
 
 autocmd vimOptions FileType netrw nmap <buffer> . mfmx
 
