@@ -31,7 +31,6 @@ nnoremap - :call Ls()<cr>
 set t_ut=
 set t_md=
 set path=.,**
-set wildignore+=*/node_modules/*,*/.git/*,*/recordings/*,*/pack
 set hidden
 set gdefault
 set autoread autowrite autowriteall
