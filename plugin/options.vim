@@ -22,7 +22,7 @@ def g:Ls(): void
   search(file, 'wc')
 enddef
 
-nnoremap - :silent call Ls()<cr>
+nnoremap <silent> - :call Ls()<cr>
 
 # options
 &t_EI ..= "\e[2 q"
