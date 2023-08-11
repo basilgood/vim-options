@@ -133,6 +133,7 @@ autocmd vimOptions BufNewFile,BufReadPost *.md,*.markdown setlocal conceallevel=
 autocmd vimOptions BufNewFile,BufReadPost *.gitignore setfiletype gitignore
 autocmd vimOptions BufNewFile,BufReadPost .babelrc    setfiletype json
 autocmd vimOptions BufNewFile,BufReadPost *.njk       setfiletype htmldjango
+autocmd vimOptions BufNewFile,BufReadPost *.mdx       setfiletype markdown
 autocmd vimOptions BufNewFile,BufReadPost *.txt       setfiletype markdown
 autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal conceallevel=0 concealcursor=
 autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal formatoptions=
