@@ -140,6 +140,9 @@ autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal formatoptions=
 autocmd vimOptions BufNewFile,BufReadPost *.html,*.javascript  setlocal matchpairs-=<:>
 autocmd vimOptions BufNewFile,BufReadPost * setlocal formatoptions-=o
 
+# lazygit command
+command! Lazygit execute ':silent !lazygit' | execute ':redraw!'
+
 # highlight groups
 def SynGroup(): void
   const s = synID(line('.'), col('.'), 1)
