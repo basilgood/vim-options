@@ -141,7 +141,7 @@ autocmd vimOptions BufNewFile,BufReadPost *.html,*.javascript  setlocal matchpai
 autocmd vimOptions BufNewFile,BufReadPost * setlocal formatoptions-=o
 
 # lazygit command
-command! Lazygit execute ':silent !lazygit' <q-args> | execute ':redraw!'
+command! -nargs=* Lazygit execute ':silent !lazygit' <q-args> | execute ':redraw!'
 
 # highlight groups
 def SynGroup(): void
