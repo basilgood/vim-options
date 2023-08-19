@@ -47,6 +47,7 @@ set nostartofline
 set nojoinspaces
 set nowrap
 set tildeop
+set scrolloff=0
 &showbreak = '↳ '
 set breakindent
 set breakindentopt=sbr
