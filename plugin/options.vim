@@ -131,6 +131,9 @@ autocmd vimOptions BufWritePre * {
   endif
   }
 
+# external changes
+autocmd CursorHold * silent! checktime
+
 # filetypes
 g:markdown_fenced_languages = ['ruby', 'html', 'js=javascript', 'ts=typescript', 'css', 'sh=bash', 'sh', 'lua', 'vim', 'nix']
 autocmd vimOptions BufNewFile,BufReadPost *.md,*.markdown setlocal conceallevel=2 concealcursor=n
