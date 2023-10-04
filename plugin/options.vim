@@ -103,8 +103,8 @@ nnoremap <silent> 3<C-g> :echon system('cat .git/HEAD')->split('\n')<cr>
 nnoremap <silent> <C-l> :noh<bar>diffupdate<bar>syntax sync fromstart<cr><c-l>
 nnoremap [q :cprev<cr>
 nnoremap ]q :cnext<cr>
-nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
-nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
+nnoremap <expr> j v:count ? (v:count > 5 ? "m'" .. v:count : '') .. 'j' : 'gj'
+nnoremap <expr> k v:count ? (v:count > 5 ? "m'" .. v:count : '') .. 'k' : 'gk'
 
 # autocmds
 # keep cursor position
