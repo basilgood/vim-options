@@ -28,8 +28,6 @@ nnoremap <silent> - :call Ls()<cr>
 &t_EI ..= "\e[2 q"
 &t_SR ..= "\e[4 q"
 &t_SI ..= "\e[6 q"
-set t_ut=
-set t_md=
 set path=.,**
 set hidden
 set gdefault
@@ -56,7 +54,7 @@ set noshowmode
 set matchpairs-=<:>
 set nrformats-=octal
 set number
-set mouse=a ttymouse=sgr
+set mouse=a
 set signcolumn=yes
 set splitright splitbelow
 set fillchars=vert:│
@@ -67,20 +65,19 @@ set lazyredraw
 set timeoutlen=3000
 set ttimeoutlen=50
 set updatetime=100
-set incsearch hlsearch
+set incsearch
 set pumheight=5
 set diffopt+=context:3,indent-heuristic,algorithm:patience
 set list
-set listchars=lead:⋅,tab:‣\ ,trail:⋅,nbsp:␣,extends:❯,precedes:❮
+set listchars=lead:⋅,tab:‣\ ,trail:⋅,nbsp:␣,extends:…,precedes:…
 autocmd vimOptions InsertEnter * set listchars-=trail:⋅
 autocmd vimOptions InsertLeave * set listchars+=trail:⋅
-set shortmess=asOIc
+set shortmess+=Ic
 set confirm
 set wildmenu
 set wildmode=longest:full,full
 set wildoptions=pum
 set wildignorecase
-set wildcharm=<C-Z>
 if executable('rg')
   &grepprg = 'rg --vimgrep'
 else
@@ -88,7 +85,7 @@ else
 endif
 set backspace=indent,eol,start
 &laststatus = 2
-&statusline = ' %{mode()} | %{expand("%:p:h:t")}/%t %m %r %= %c:%l/%L    %y'
+&statusline = ' %{mode()} | %{expand("%:p:h:t")}/%t %{&modified?" ":""} %r %= %c:%l/%L    %y'
 
 # mappings
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
@@ -147,25 +144,9 @@ autocmd vimOptions BufNewFile,BufReadPost *.json  setlocal formatoptions=
 autocmd vimOptions BufNewFile,BufReadPost *.html,*.javascript  setlocal matchpairs-=<:>
 autocmd vimOptions BufNewFile,BufReadPost * setlocal formatoptions-=o
 
-# lazygit command
-command! -nargs=* Lazygit execute ':silent !lazygit' <q-args> | execute ':redraw!'
-
 # highlight groups
 def SynGroup(): void
   const s = synID(line('.'), col('.'), 1)
   echo synIDattr(s, 'name') .. ' -> ' .. synIDattr(synIDtrans(s), 'name')
 enddef
 command HL SynGroup()
-
-# sessions
-const session_path = expand('~/.cache/vim/sessions/')
-if !isdirectory(session_path)
-  mkdir(session_path, 'p')
-endif
-autocmd! vimOptions VimLeavePre * {
-  execute 'mksession! ' .. session_path .. split(getcwd(), '/')[-1]
-  }
-command! -nargs=0 SS {
-  execute 'source ' .. session_path .. split(getcwd(), '/')[-1]
-  }
-nnoremap <leader>s :SS<cr>
