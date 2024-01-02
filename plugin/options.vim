@@ -65,7 +65,7 @@ set lazyredraw
 set timeoutlen=3000
 set ttimeoutlen=50
 set updatetime=100
-set incsearch
+set incsearch hlsearch
 set pumheight=5
 set diffopt+=context:3,indent-heuristic,algorithm:patience
 set list
