@@ -79,7 +79,7 @@ set wildmode=longest:full,full
 set wildoptions=pum
 set wildignorecase
 if executable('rg')
-  &grepprg = 'rg --vimgrep'
+  &grepprg = 'rg --color=never --vimgrep'
 else
   &grepprg = 'grep -rnHI'
 endif
