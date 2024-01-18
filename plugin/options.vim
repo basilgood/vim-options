@@ -5,7 +5,7 @@ augroup vimOptions
 augroup END
 
 # netrw
-g:netrw_list_hide = ',^\.\=/\=$'
+g:netrw_list_hide = '^./$,^../$'
 g:netrw_banner = 0
 g:netrw_altfile = 1
 g:netrw_preview = 1
