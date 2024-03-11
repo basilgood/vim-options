@@ -57,6 +57,7 @@ set number
 set mouse=a
 set signcolumn=yes
 set splitright splitbelow
+set splitkeep=screen
 set fillchars=vert:│
 set virtualedit=onemore
 set sidescrolloff=10 sidescroll=1
