@@ -28,6 +28,7 @@ nnoremap <silent> - :call Ls()<cr>
 &t_EI ..= "\e[2 q"
 &t_SR ..= "\e[4 q"
 &t_SI ..= "\e[6 q"
+&t_ut = ''
 set path=.,**
 set hidden
 set gdefault
