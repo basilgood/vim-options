@@ -56,6 +56,8 @@ set matchpairs-=<:>
 set nrformats-=octal
 set number
 set mouse=a
+set cursorline
+set cursorlineopt=number
 set signcolumn=yes
 set splitright splitbelow
 set splitkeep=screen
