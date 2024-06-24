@@ -16,14 +16,6 @@ g:netrw_cursor = 0
 
 autocmd vimOptions FileType netrw nmap <buffer> . mfmx
 
-def g:Ls(): void
-  var file = expand('%:t')
-  execute 'Explore' expand('%:h')
-  search(file, 'wc')
-enddef
-
-nnoremap <silent> - :call Ls()<cr>
-
 # options
 &t_EI ..= "\e[2 q"
 &t_SR ..= "\e[4 q"
