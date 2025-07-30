@@ -16,6 +16,14 @@ g:netrw_cursor = 0
 
 autocmd vimOptions FileType netrw nmap <buffer> . mfmx
 
+def OpenExploreFindFile()
+  const file = expand('%:t')
+  execute 'Explore!'
+  call search('^' .. file .. '$', 'wc')
+enddef
+
+nnoremap - :call <sid>OpenExploreFindFile()<CR>
+
 # options
 &t_EI ..= "\e[2 q"
 &t_SR ..= "\e[4 q"
