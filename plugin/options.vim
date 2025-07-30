@@ -61,7 +61,7 @@ set cursorlineopt=number
 set signcolumn=yes
 set splitright splitbelow
 set splitkeep=screen
-set fillchars=vert:│
+set fillchars=diff:\ ,vert:│
 set virtualedit=onemore
 set sidescrolloff=10 sidescroll=1
 set sessionoptions=buffers,curdir,folds,tabpages,winsize
