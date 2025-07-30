@@ -89,7 +89,7 @@ else
 endif
 set backspace=indent,eol,start
 &laststatus = 2
-&statusline = ' %{mode()} | %{expand("%:p:h:t")}/%t %{&modified?" ":""} %r %= %c:%l/%L    %y'
+&statusline = '%{expand("%:p:h:t")}/%t %{&modified?" ":""} %r %= %c:%l/%L    %y'
 
 # mappings
 nnoremap <silent> <c-w>d :bp<bar>bd#<cr>
