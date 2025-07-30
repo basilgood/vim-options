@@ -73,7 +73,7 @@ set incsearch hlsearch
 set pumheight=5
 set diffopt+=context:3,indent-heuristic,algorithm:patience
 set list
-set listchars=lead:⋅,tab:\▏\ ,trail:⋅,nbsp:␣
+set listchars=lead:⋅,trail:⋅,tab:⁚⁚,nbsp:␣,extends:»,precedes:«
 autocmd vimOptions InsertEnter * set listchars-=trail:⋅
 autocmd vimOptions InsertLeave * set listchars+=trail:⋅
 set shortmess+=Ic
