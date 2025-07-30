@@ -154,3 +154,24 @@ def SynGroup(): void
   echo synIDattr(s, 'name') .. ' -> ' .. synIDattr(synIDtrans(s), 'name')
 enddef
 command HL SynGroup()
+
+# sessions
+const sessionDir = expand('~/.cache/vim')
+const project_name = fnamemodify(getcwd(), ':t')
+
+def SaveSession(): void
+  if !isdirectory(sessionDir)
+    call mkdir(sessionDir, 'p')
+  endif
+  const path = sessionDir .. '/' .. project_name .. '.session'
+  silent execute 'mksession! ' .. fnameescape(path)
+enddef
+
+autocmd VimLeavePre * call SaveSession()
+
+def LoadSession(): void
+  const path = sessionDir .. '/' .. project_name .. '.session'
+  execute 'source' fnameescape(path)
+enddef
+
+nnoremap <leader>s :call <sid>LoadSession()<CR>
